@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--
+AUTHOR: Jacob Kromm
+VERSION: 1.0
+CREATED: 3/6/2015
+ASSIGNMENT: Ski Patrol Form
+-->
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>Nub's Ski Patrol</title>
+		<link href="CSS/foundation.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="title">
+			<div class="row">
+				<div class="small-4 column">
+					<h1>NNSP Sign In</h1>
+				</div>
+			</div>
+		</div>
+		<form>
+
+			// ------------ Header ------------
+			<div class="row">
+				<div class="small-3 column">
+					<label>Date:</label>
+					<div id="weekDay"></div>
+					<div id="date"></div>
+				</div>
+			</div>
+
+			// ------------ Column Headers -------
+			<div class="row">
+				<div class="small-1 column panel">
+					<label>Team</label>
+				</div>
+				<div class="small-1 column panel">
+					<label>Rad #</label>
+				</div>
+				<div class="small-3 column panel">
+					<label>Patroller</label>
+				</div>
+				<div class="small-2 column panel">
+					<label>Time</label>
+				</div>
+				<div class="small-2 column panel">
+					<label>Rating</label>
+				</div>
+				<div class="small-3 column panel">
+					<label>Guest Name</label>
+				</div>
+			</div>
+
+			<br>
+
+
+			<div class="row">
+				<div class="small-1 column">
+					<h3>1</h3>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required id="patrollerName.1.1" onchange="getPatroller(this.id)"/>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" required>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="small-1 column">
+					<h3>2</h3>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" required>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="small-1 column">
+					<h3>3</h3>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" required>
+				</div>
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="small-1 column">
+					<h3>4</h3>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" required>
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="small-1 column">
+					<label>AUX & CAN</label>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="Team Number" required>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-1 column">
+					<label>PD-T2</label>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" required>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-1 column">
+					<label>APD-T1</label>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" required>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-1 column">
+					<label>APD-T3</label>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" required>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-1 column">
+					<label>TRNG-T4</label>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-2 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" required>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-1 column">
+					<label>Med Assoc.</label>
+				</div>
+				<div class="small-1 column">
+					<input type="number" min="1" max="50" required>
+				</div>
+				<div class="small-3 column">
+					<input type="text" placeholder="First and Last Name" maxlength="50" required>
+				</div>
+				<div class="small-2 column">
+					<input type="time" required>
+				</div>
+				<div class="small-5 column">
+					<select>
+						<option value="BAS">BAS</option>
+						<option value="SER">SER</option>
+						<option value="CER">CER</option>
+					</select>
+				</div>
+			</div>
+
+		</form>
+		<!-- SCRIPTS -->
+		<script src="scripts/main.js"></script>
+	</body>
+</html>
